@@ -2,8 +2,6 @@ pipeline {
     agent any
 
     environment {
-        OLLAMA_HOST = "http://localhost:11434"
-        MODEL = "llama3.2"
         PYTHON = "python3"
     }
 
@@ -12,13 +10,10 @@ pipeline {
             steps {
                 sh '''
                     echo "=== Setting up Python environment ==="
-                    sudo apt update -y
-                    sudo apt install -y python3-venv
                     ${PYTHON} -m venv venv
                     . venv/bin/activate
                     pip install --upgrade pip
-                    pip install requests
-                    pip install pytest
+                    pip install requests pytest
                 '''
             }
         }
