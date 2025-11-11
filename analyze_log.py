@@ -3,7 +3,7 @@ import requests, os, json, subprocess
 from email.message import EmailMessage
 import smtplib
 
-# --------- Configuration ---------------
+# --------- Configuration ---------------------
 OLLAMA_HOST = "http://localhost:11434"
 MODEL = "llama3.2"
 BUILD_LOG_PATH = "build.log"
@@ -12,7 +12,7 @@ SMTP_PORT = 465
 SMTP_USER = "awsawsaws1605@gmail.com"       # <-- change
 SMTP_APP_PASSWORD = "htvsybrqqlxvfjta"   # <-- change
 EMAIL_TO = "awsawsaws1605@gmail.com"  # <-- change
-# ----------------------------------
+# ------------------------------------------
 
 def read_build_log(path):
     if not os.path.exists(path):
