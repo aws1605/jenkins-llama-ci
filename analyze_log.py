@@ -9,7 +9,7 @@ import smtplib
 
 # --------- Configuration ---------------------
 OLLAMA_HOST = "http://localhost:11434"
-MODEL = "llama3.2"
+MODEL = "llama3.2:latest"
 BUILD_LOG_PATH = "build.log"
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 465
