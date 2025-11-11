@@ -3,15 +3,15 @@ import requests, os, json, subprocess
 from email.message import EmailMessage
 import smtplib
 
-# --------- Configuration ----------
+# --------- Configuration ---------------
 OLLAMA_HOST = "http://localhost:11434"
 MODEL = "llama3.2"
 BUILD_LOG_PATH = "build.log"
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 465
-SMTP_USER = "your.email@gmail.com"        # <-- change
-SMTP_APP_PASSWORD = "your_app_password"   # <-- change
-EMAIL_TO = "developer.email@example.com"  # <-- change
+SMTP_USER = "awsawsaws1605@gmail.com"        # <-- change
+SMTP_APP_PASSWORD = "htvs ybrq qlxv fjta"   # <-- change
+EMAIL_TO = "awsawsaws1605@gmail.com"  # <-- change
 # ----------------------------------
 
 def read_build_log(path):
