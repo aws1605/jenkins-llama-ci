@@ -16,7 +16,7 @@ from email.message import EmailMessage
 import traceback
 from typing import Optional
 
-# ----------------- CONFIGURATION (EDIT THESE) -----------------
+# ----------------- CONFIGURATION (EDIT THESE) ------------------------
 OLLAMA_HOST = "http://localhost:11434"      # Ollama REST API host
 MODEL = "llama3.2:latest"                   # Exact model name from `ollama list`
 BUILD_LOG_PATH = "build.log"
@@ -24,8 +24,8 @@ BUILD_LOG_PATH = "build.log"
 # SMTP / Gmail - REPLACE these with your actual values
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 465
-SMTP_USER = "awsawsaws1605@gmail.com"          # <-- REPLACE: your gmail
-SMTP_APP_PASSWORD = "htvsybrqqlxvfjta"     # <-- REPLACE: Gmail App Password (16 chars)
+SMTP_USER = "awsawsaws1605@gmail.com"          # <-- REPLACE: your gmail id
+SMTP_APP_PASSWORD = "htvsybrqqlxvfjta"     # <-- REPLACE: Gmail App Password without any space (16 chars)
 EMAIL_TO = "awsawsaws1605@gmail.com"      # <-- REPLACE: where you want to receive reports
 # ----------------------------------------------------------------
 
