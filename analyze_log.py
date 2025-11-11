@@ -9,8 +9,8 @@ MODEL = "llama3.2"
 BUILD_LOG_PATH = "build.log"
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 465
-SMTP_USER = "awsawsaws1605@gmail.com"        # <-- change
-SMTP_APP_PASSWORD = "htvs ybrq qlxv fjta"   # <-- change
+SMTP_USER = "awsawsaws1605@gmail.com"       # <-- change
+SMTP_APP_PASSWORD = "htvsybrqqlxvfjta"   # <-- change
 EMAIL_TO = "awsawsaws1605@gmail.com"  # <-- change
 # ----------------------------------
 
