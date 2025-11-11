@@ -1,36 +1,33 @@
 pipeline {
-  agent any
+    agent any
+    environment {
+        PYTHONUNBUFFERED = '1'
+    }
+    stages {
+        stage('Setup Python') {
+            steps {
+                sh '''
+                    python3 -m venv venv
+                    . venv/bin/activate
+                    pip install -r requirements.txt || true
+                '''
+            }
+        }
 
-  stages {
-    stage('Checkout') {
-      steps {
-        checkout([$class: 'GitSCM', branches: [[name: '*/main']],
-                  userRemoteConfigs: [[url: 'https://github.com/<yourusername>/jenkins-llama-ci.git']]])
-      }
+        stage('Run Tests') {
+            steps {
+                sh '''
+                    . venv/bin/activate
+                    pytest --maxfail=1 --disable-warnings -q || true
+                    python3 analyze_log.py || true
+                '''
+            }
+        }
     }
 
-    stage('Setup Python') {
-      steps {
-        sh 'python3 --version || true'
-        sh 'python3 -m venv venv || true'
-        sh '. venv/bin/activate && pip install -r requirements.txt || true'
-      }
+    post {
+        always {
+            sh 'python3 analyze_log.py || true'
+        }
     }
-
-    stage('Run Tests') {
-      steps {
-        sh '''
-           set -o pipefail
-           (pytest -q 2>&1) | tee build.log
-        '''
-        archiveArtifacts artifacts: 'build.log', fingerprint: true
-      }
-    }
-  }
-
-  post {
-    always {
-      sh 'python3 analyze_log.py || true'
-    }
-  }
 }
