@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 import requests, os, json, subprocess
+print("=== DEBUG: Starting analyze_log.py ===")
+print("Current directory:", os.getcwd())
+print("Files in workspace:", os.listdir("."))
+
 from email.message import EmailMessage
 import smtplib
 
