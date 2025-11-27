@@ -16,7 +16,7 @@ from email.message import EmailMessage
 import traceback
 from typing import Optional
 
-# ----------------- CONFIGURATION (EDIT THESE) ------------------------
+# ----------------- CONFIGURATION (EDIT THESE) ----------------------------
 OLLAMA_HOST = "http://localhost:11434"      # Ollama REST API host
 MODEL = "llama3.2:latest"                   # Exact model name from `ollama list`
 BUILD_LOG_PATH = "build.log"
