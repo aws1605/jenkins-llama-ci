@@ -6,7 +6,7 @@ analyze_log.py
 - Calls local Ollama REST API to analyze build log using llama3.2:latest
 - Sends an email with AI analysis (or with an Ollama error / missing-log notice)
 - Prints clear debug output for Jenkins console
-"""
+"""""""""
 
 import os
 import json
